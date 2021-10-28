@@ -9,5 +9,4 @@ public class Microcommerce2Application {
 	public static void main(String[] args) {
 		SpringApplication.run(Microcommerce2Application.class, args);
 	}
-
 }
