@@ -24,8 +24,18 @@ public class MainController2 {
     }
 
     @PostMapping(value = "api/carsList/addNewCar")
-    public String addNewCar(@RequestBody Car car) {
+    public Car addNewCar(@RequestBody Car car) {
         return serviceGetApi.addApiCar(car);
+    }
+
+    @PutMapping(value = "api/car/{id}")
+    public Car updateCar(@PathVariable int id, @RequestBody Car car) {
+        return serviceGetApi.update(id, car);
+    }
+
+    @DeleteMapping(value = "api/car/{id}")
+    public Car deleteCar(@PathVariable int id) {
+        return serviceGetApi.deleteCarApi(id);
     }
 }
 
